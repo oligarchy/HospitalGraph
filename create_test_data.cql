@@ -73,6 +73,8 @@ _4-[:RECEIVED_STUDY]->_29,
 
 _3-[:INFECTED_WITH]->_30,
 
-
-// _8-[:CURES {age_max:60,age_min:18,indication:"Adult asthma"}]->_23, 
-// _9-[:BELONGS_TO_CLASS]->_6,
+_11-[:ORDERED_STUDY]->_25,
+_11-[:ORDERED_STUDY]->_26,
+_11-[:ORDERED_STUDY]->_27,
+_10-[:ORDERED_STUDY]->_28,
+_9-[:ORDERED_STUDY]->_28,
