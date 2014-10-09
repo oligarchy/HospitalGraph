@@ -83,6 +83,7 @@ _5-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_37,
 _3-[:INFECTED_WITH {displayText: "INFECTED_WITH"}]->_30,
 _6-[:INFECTED_WITH {displayText: "INFECTED_WITH"}]->_30,
 _7-[:INFECTED_WITH {displayText: "INFECTED_WITH"}]->_30,
+_5-[:INFECTED_WITH {displayText: "INFECTED_WITH"}]->_30,
 
 _11-[:ORDERED_STUDY {displayText: "ORDERED_STUDY"}]->_25,
 _11-[:ORDERED_STUDY {displayText: "ORDERED_STUDY"}]->_26,
