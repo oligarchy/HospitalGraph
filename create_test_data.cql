@@ -2,11 +2,11 @@ create
 
 (_1:Patient {name: "Justin", admitted: "1398973737", discharged: "1401652137"}),
 (_2:Patient {name: "Anthony", admitted: "1398973737", discharged: "1401652137"}),
-(_3:Patient {name: "Mike", admitted: "1398973737", discharged: "1401652137"}),
+(_3:Patient {name: "Mike", admitted: "1398973737", discharged: "1401652137", infected: "true"}),
 (_4:Patient {name: "Alice", admitted: "", discharged: ""}),
-(_5:Patient {name: "Bob", admitted: "1398973737", discharged: ""}),
-(_6:Patient {name: "Chris", admitted: "1398973737", discharged: "1401652137"}),
-(_7:Patient {name: "Dave", admitted: "1398973737", discharged: "1401652137"}),
+(_5:Patient {name: "Bob", admitted: "1398973737", discharged: "", infected: "true"}),
+(_6:Patient {name: "Chris", admitted: "1398973737", discharged: "1401652137", infected: "true"}),
+(_7:Patient {name: "Dave", admitted: "1398973737", discharged: "1401652137", infected: "true"}),
 
 (_8:Doctor {name: "Deible", specialty: "Scope Creep"}),
 (_9:Doctor {name: "Joyce", specialty: "Radiology"}),
@@ -41,10 +41,6 @@ create
 (_36:ImagingStudy {type: "CR", subspecialty: "FOOT", studyDate: "1398973737"}),
 (_37:ImagingStudy {type: "CR", subspecialty: "FOOT", studyDate: "1398973737"}),
 
-(_30:Infection {name: "MRSA", firstDetected: "1400350723"}),
-(_31:Infection {name: "Legionella", firstDetected: "1401214723"}),
-
-_14-[:RECEIVED_SERVICE {displayText: "RECEIVED_SERVICE"}]->_21,
 _15-[:RECEIVED_SERVICE {displayText: "RECEIVED_SERVICE"}]->_22,
 _16-[:RECEIVED_SERVICE {displayText: "RECEIVED_SERVICE"}]->_23,
 _17-[:RECEIVED_SERVICE {displayText: "RECEIVED_SERVICE"}]->_24,
@@ -78,16 +74,4 @@ _2-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_26,
 _3-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_27,
 _3-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_28,
 _4-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_29,
-_5-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_37,
-
-_3-[:INFECTED_WITH {displayText: "INFECTED_WITH"}]->_30,
-_6-[:INFECTED_WITH {displayText: "INFECTED_WITH"}]->_30,
-_7-[:INFECTED_WITH {displayText: "INFECTED_WITH"}]->_30,
-_5-[:INFECTED_WITH {displayText: "INFECTED_WITH"}]->_30,
-
-_11-[:ORDERED_STUDY {displayText: "ORDERED_STUDY"}]->_25,
-_11-[:ORDERED_STUDY {displayText: "ORDERED_STUDY"}]->_26,
-_11-[:ORDERED_STUDY {displayText: "ORDERED_STUDY"}]->_27,
-_10-[:ORDERED_STUDY {displayText: "ORDERED_STUDY"}]->_28,
-_9-[:ORDERED_STUDY {displayText: "ORDERED_STUDY"}]->_36,
-_9-[:ORDERED_STUDY {displayText: "ORDERED_STUDY"}]->_37
+_5-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_37
