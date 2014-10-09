@@ -21,6 +21,7 @@ create
 (_15:Room {name: "Room 321"}),
 (_16:Room {name: "Room 111"}),
 (_17:Room {name: "Room 101"}),
+(_38:Room {name: "Room 102"}),
 (_32:Room {name: "MRI Room"}),
 
 (_18:Housekeeper {name: "Morgan"}),
@@ -33,13 +34,13 @@ create
 (_23:RoomServiced {type: "Change Linen", serviceDate: "1398973737"}),
 (_24:RoomServiced {type: "Clean Bathroom", serviceDate: "1398973737"}),
 
-(_25:ImagingStudy {type: "CT", subspecialty: "CHEST", studyDate: "1398973737"}),
-(_26:ImagingStudy {type: "CT", subspecialty: "SPINE", studyDate: "1398973737"}),
-(_27:ImagingStudy {type: "DX", subspecialty: "HEAD", studyDate: "1398973737"}),
-(_28:ImagingStudy {type: "MR", subspecialty: "ABDOMEN", studyDate: "1398973737"}),
-(_29:ImagingStudy {type: "US", subspecialty: "LEG", studyDate: "1398973737"}),
-(_36:ImagingStudy {type: "CR", subspecialty: "FOOT", studyDate: "1398973737"}),
-(_37:ImagingStudy {type: "CR", subspecialty: "FOOT", studyDate: "1398973737"}),
+//(_25:ImagingStudy {type: "CT", subspecialty: "CHEST", studyDate: "1398973737"}),
+//(_26:ImagingStudy {type: "CT", subspecialty: "SPINE", studyDate: "1398973737"}),
+//(_27:ImagingStudy {type: "DX", subspecialty: "HEAD", studyDate: "1398973737"}),
+//(_28:ImagingStudy {type: "MR", subspecialty: "ABDOMEN", studyDate: "1398973737"}),
+//(_29:ImagingStudy {type: "US", subspecialty: "LEG", studyDate: "1398973737"}),
+//(_36:ImagingStudy {type: "CR", subspecialty: "FOOT", studyDate: "1398973737"}),
+//(_37:ImagingStudy {type: "CR", subspecialty: "FOOT", studyDate: "1398973737"}),
 
 _15-[:RECEIVED_SERVICE {displayText: "RECEIVED_SERVICE"}]->_22,
 _16-[:RECEIVED_SERVICE {displayText: "RECEIVED_SERVICE"}]->_23,
@@ -56,10 +57,17 @@ _35-[:COMPLETED_SERVICE {displayText: "COMPLETED_SERVICE"}]->_23,
 
 _1-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_14,
 _2-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_14,
-_3-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_15,
+_3-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_38,
 _5-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_16,
 _6-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_15,
 _7-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_15,
+
+_1-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_32,
+_2-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_32,
+_3-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_32,
+_5-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_32,
+_6-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_32,
+_7-[:STAYED_IN {startDate: "1398973737", endDate: "1401652137", displayText: "STAYED_IN"}]->_32,
 
 _25-[:PERFORMED_IN {displayText: "PERFORMED_IN"}]->_32,
 _26-[:PERFORMED_IN {displayText: "PERFORMED_IN"}]->_32,
@@ -69,9 +77,4 @@ _29-[:PERFORMED_IN {displayText: "PERFORMED_IN"}]->_32,
 _36-[:PERFORMED_IN {displayText: "PERFORMED_IN"}]->_32,
 _37-[:PERFORMED_IN {displayText: "PERFORMED_IN"}]->_32,
 
-_1-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_25,
-_2-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_26,
-_3-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_27,
-_3-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_28,
-_4-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_29,
-_5-[:RECEIVED_STUDY {displayText: "RECEIVED_STUDY"}]->_37
+

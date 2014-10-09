@@ -25,3 +25,11 @@ WHERE
 	patient.infected = "true" 
 
 return *
+
+
+// at this level it will show a common room that connects all patients
+MATCH 
+	infect = (patient {infected: "true"})-[]-()
+WHERE
+	patient.infected = "true" 
+return *
