@@ -33,3 +33,35 @@ MATCH
 WHERE
 	patient.infected = "true" 
 return *
+
+// this will give you the room node with the highest degree in tabular format
+MATCH (patient {infected: "true"})--(room) WHERE patient.infected = "true" return room.name, count(*) as connect order by connect desc limit 1
+
+
+
+
+
+// step 1 - this will show the whole graph
+match (n)--() return n
+
+
+// step 2 - this will show any nodes connected to anyone infected
+MATCH 
+	infect = (patient {infected: "true"})-[]-()-[]-()-[]-()
+WHERE
+	patient.infected = "true" 
+
+return *
+
+
+// step 3 - this only shows direct connections with infected patients
+MATCH 
+	infect = (patient {infected: "true"})-[]-()
+WHERE
+	patient.infected = "true" 
+return *
+
+
+// step 4 - this shows the vertex with the highest degree connected to the infected patients
+// effectively naming our infection source/reservoir
+MATCH (patient {infected: "true"})--(room) WHERE patient.infected = "true" return room.name, count(*) as connect order by connect desc limit 1
