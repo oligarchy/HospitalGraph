@@ -16,31 +16,6 @@ OPTIONAL MATCH
 	studies = (study)-[per:PERFORMED_IN]-(room)
 
 
-RETURN *
-
-
-MATCH 
-	infect = (patient {infected: "true"})-[]-()-[]-()-[]-()
-WHERE
-	patient.infected = "true" 
-
-return *
-
-
-// at this level it will show a common room that connects all patients
-MATCH 
-	infect = (patient {infected: "true"})-[]-()
-WHERE
-	patient.infected = "true" 
-return *
-
-// this will give you the room node with the highest degree in tabular format
-MATCH (patient {infected: "true"})--(room) WHERE patient.infected = "true" return room.name, count(*) as connect order by connect desc limit 1
-
-
-
-
-
 // step 1 - this will show the whole graph
 match (n)--() return n
 

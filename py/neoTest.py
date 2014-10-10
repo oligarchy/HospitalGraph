@@ -17,5 +17,4 @@ for record in query.stream() :
 
 	print(record[0])
 
-for item in rooms.items() :
-	print(item) #+ print(repr(rooms[key]))
+print("Infection Source: " + repr(max(rooms, key=rooms.get)))
